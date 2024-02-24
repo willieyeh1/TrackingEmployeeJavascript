@@ -52,8 +52,17 @@ if (confirm("Do you want to add more employees")){}
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  let 
+const initialValue = 0;
+const sumWithInitial = employeesArray.reduce(
+  (accumulator, currentValue) => accumulator + parseInt(currentValue.salary),
+  initialValue,
+)
+const Average= sumWithInitial/employeesArray.length
+console.log(sumWithInitial)
+console.log(`The employee average salary between ${employeesArray.length} employees is ${Average}.`)
 }
+
+
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
