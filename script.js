@@ -28,16 +28,16 @@ const collectEmployees = function() {
     }else {
       break;
     }
-
-   }
   
-
-  const workerss = {
-  firstName: firstNames,
-  lastName: lastNames,
-  salary: salaries
   }
-  workers.push(workerss)
+
+
+  const workersObject = {
+    firstName: firstNames,
+    lastName: lastNames,
+    salary: salaries
+  }
+  workers.push(workersObject)
 
 
 if (confirm("Do you want to add more employees")){}
@@ -58,16 +58,23 @@ const sumWithInitial = employeesArray.reduce(
   initialValue,
 )
 const Average= sumWithInitial/employeesArray.length
-console.log(sumWithInitial)
-console.log(`The employee average salary between ${employeesArray.length} employees is ${Average}.`)
+// console.log(sumWithInitial)
+console.log(`The average employee salary between ${employeesArray.length} employee(s) is ${Average}.`)
 }
 
 
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
-}
+    let randEmployee = function() {
+        return employeesArray[Math.floor(Math.random() * employeesArray.length)]
+    }
+    let randE = randEmployee ()
+    console.log (randE)
+    // console.log (employeesArray[randEmployee()])
+    console.log(`Congratulations to ${randE.firstName} ${randE.lastName}, winner of randomw drawing.`)
+      }
+      
 
 /*
   ====================
